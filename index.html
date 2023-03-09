@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="aframe.js"></script>
+		<title>7</title>
+	</head>
+	<body>
+		<a-scene>
+			<a-assets>
+				<img id="su" src="resources/su.jpg" alt="" />
+			</a-assets>
+			<a-sky id="image-360" radius="20" src="#su"></a-sky>
+
+			<!-- the content of the skybox -->
+			<a-box
+				color="green"
+				position="-5 2 5"
+				rotation="0 45 0"
+				scale="1 1 1"
+				animation__1="property: rotation; to: 0 360 0; dir: alternate; dur: 2000; loop: true;"
+			></a-box>
+			<a-box
+				color="red"
+				position="-10 2 3"
+				rotation="0 45 0"
+				scale="1 1 1"
+				animation__1="property: rotation; to: 0 360 0; dir: alternate; dur: 2000; loop: true;"
+			></a-box>
+			<a-box
+				color="blue"
+				position="-10 2 -2"
+				rotation="0 45 0"
+				scale="1 1 1"
+				animation__1="property: rotation; to: 0 360 0; dir: alternate; dur: 2000; loop: true;"
+			></a-box>
+
+			<a-text
+				position="-2 6 -3"
+				value="Looking for 3 boxes? Look on your left"
+				width="10"
+				color="blue"
+			></a-text>
+
+			<!-- player viewport -->
+			<a-camera position="2 3 5">
+				<!-- cursor cicle  -->
+				<a-color color="red"></a-color>
+			</a-camera>
+		</a-scene>
+	</body>
+</html>
